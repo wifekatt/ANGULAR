@@ -52,19 +52,12 @@ import { VoteUpdateComponent } from '../../vote/vote-update/vote-update.componen
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule,
-    MatRippleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTooltipModule,
-    MatGridListModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     
     // * MATERIAL IMPORTS
-    
+    MatRippleModule,
     MatMenuModule,
     MatIconModule,
     MatDividerModule,
@@ -82,6 +75,8 @@ import { VoteUpdateComponent } from '../../vote/vote-update/vote-update.componen
     MatButtonToggleModule,
     MatCardModule,
     MatGridListModule,
+    MatTooltipModule,
+
 
 
 
