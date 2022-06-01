@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 import { CandidatComponent } from '../../candidat/candidat/candidat.component';
 import { CandidatListComponent } from '../../candidat-list/candidat-list/candidat-list.component';
-import { UrnesComponent } from '../../urnes/urnes.component';
+import { UrnesComponent } from '../../urnes/urnes/urnes.component';
 import { VoteComponent } from '../../vote/vote/vote.component';
 import { ElecteurComponent } from '../../electeur/electeur/electeur.component';
 import { AdminComponent } from '../../admin/admin/admin.component';

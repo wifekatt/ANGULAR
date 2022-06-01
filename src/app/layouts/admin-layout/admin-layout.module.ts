@@ -29,21 +29,23 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 
 import { AdminComponent } from '../../admin/admin/admin.component';
-import { AdminCreateComponent } from '../../admin/admin-create/admin-create.component';
-import { AdminUpdateComponent } from '../../admin/admin-update/admin-update.component';
+import { AdminDialogComponent } from '../../admin/admin-dialog/admin-dialog.component';
+
 import { CandidatComponent } from '../../candidat/candidat/candidat.component';
-import { CandidatCreateComponent } from '../../candidat/candidat-create/candidat-create.component';
-import { CandidatUpdateComponent } from '../../candidat/candidat-update/candidat-update.component';
+import { CandidatDialogComponent } from '../../candidat/candidat-dialog/candidat-dialog.component';
+
 import { CandidatListComponent } from '../../candidat-list/candidat-list/candidat-list.component';
-import { CandidatListCreateComponent } from '../../candidat-list/candidat-list-create/candidat-list-create.component';
-import { CandidatListUpdateComponent } from '../../candidat-list/candidat-list-update/candidat-list-update.component';
+import { CandidatListDialogComponent } from '../../candidat-list/candidat-list-dialog/candidat-list-dialog.component';
+
 import { ElecteurComponent } from '../../electeur/electeur/electeur.component';
-import { ElecteurCreateComponent } from '../../electeur/electeur-create/electeur-create.component';
-import { ElecteurUpdateComponent } from '../../electeur/electeur-update/electeur-update.component';
-import { UrnesComponent } from '../../urnes/urnes.component';
+import { ElecteurDialogComponent } from '../../electeur/electeur-dialog/electeur-dialog.component';
+
+import { UrnesComponent } from '../../urnes/urnes/urnes.component';
+import { UrnesDialogComponent } from '../../urnes/urnes-dialog/urnes-dialog.component';
+
 import { VoteComponent } from '../../vote/vote/vote.component';
-import { VoteCreateComponent } from '../../vote/vote-create/vote-create.component';
-import { VoteUpdateComponent } from '../../vote/vote-update/vote-update.component';
+import { VoteDialogComponent } from '../../vote/vote-dialog/vote-dialog.component'
+
 
 
 @NgModule({
@@ -85,28 +87,34 @@ import { VoteUpdateComponent } from '../../vote/vote-update/vote-update.componen
     DashboardComponent,
     //admin
     AdminComponent,
-    AdminCreateComponent,
-    AdminUpdateComponent,
+    AdminDialogComponent,
     //candidat
     CandidatComponent,
-    CandidatCreateComponent,
-    CandidatUpdateComponent,
+    CandidatDialogComponent,
     //candidat-list
     CandidatListComponent,
-    CandidatListCreateComponent,
-    CandidatListUpdateComponent,
+    CandidatListDialogComponent,
     //electeur
     ElecteurComponent,
-    ElecteurCreateComponent,
-    ElecteurUpdateComponent,
+    ElecteurDialogComponent,
     //urnes
     UrnesComponent,
+    UrnesDialogComponent,
     //vote
     VoteComponent,
-    VoteCreateComponent,
-    VoteUpdateComponent,
+    VoteDialogComponent,
+  
 
+  ],
+  exports: [
+    AdminComponent,
+    CandidatComponent,
+    CandidatListComponent,
+    ElecteurComponent,
+    UrnesComponent,
+    VoteComponent
   ]
+
 })
 
 export class AdminLayoutModule {}
