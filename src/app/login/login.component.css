@@ -10,14 +10,16 @@
     object-fit: cover;
   }
   
-  
+ .card{
+    opacity: 94%;
+ }
   
   .cardbody-color{
     background-color: #E0E0E0;
   }
   
   a{
-    text-decoration: none;
+    color:black;
   }
   .row {
     display: flex;
