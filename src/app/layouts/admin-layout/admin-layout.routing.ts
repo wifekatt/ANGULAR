@@ -17,5 +17,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'candidat-list', component: CandidatListComponent },
     { path: 'electeur', component: ElecteurComponent },
     { path: 'urnes', component: UrnesComponent },
-    { path: 'vote', component: VoteComponent}
+    { path: 'vote', component: VoteComponent},
+    
 ];

@@ -37,8 +37,8 @@ export class AdminComponent implements OnInit {
     this.adminApi.getAdmins()
           .subscribe({
             next:(res:any)=>{
+              console.log(JSON.stringify(res));
               this.dataSource = new MatTableDataSource(res);
-              console.log(this.dataSource);
               this.dataSource.paginator = this.paginator;
               this.dataSource.sort = this.sort;
 
@@ -59,8 +59,8 @@ export class AdminComponent implements OnInit {
         }
     })
     }
-  deleteAdmin(id : number){
-    this.adminApi.deleteAdmin(id)
+  deleteAdmin(adminId : number){
+    this.adminApi.deleteAdmin(adminId)
     .subscribe({
       next:(res)=>{
         alert("admin deleted successfully");

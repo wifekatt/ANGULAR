@@ -103,6 +103,7 @@ import { VoteDialogComponent } from '../../vote/vote-dialog/vote-dialog.componen
     //vote
     VoteComponent,
     VoteDialogComponent,
+    
   
 
   ],

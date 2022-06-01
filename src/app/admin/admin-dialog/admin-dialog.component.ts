@@ -20,15 +20,15 @@ export class AdminDialogComponent implements OnInit {
 
     ngOnInit(): void {
       this.AdminsForm = this.formBuilder.group({
-        FullName : ['',Validators.required],
-        Password : ['',Validators.required],
-        PrivilegeID : ['',Validators.required],
+        adminName : ['',Validators.required],
+        adminPassword : ['',Validators.required],
+        privilegeID : ['',Validators.required],
         })
         if(this.editData){
           this.actionBtn = "Update";
-          this.AdminsForm.controls['FullName'].setValue(this.editData.FullName);
-          this.AdminsForm.controls['Password'].setValue(this.editData.Password);
-          this.AdminsForm.controls['PrivilegeID'].setValue(this.editData.PrivilegeID);
+          this.AdminsForm.controls['adminName'].setValue(this.editData.adminName);
+          this.AdminsForm.controls['adminPassword'].setValue(this.editData.adminPassword);
+          this.AdminsForm.controls['privilegeID'].setValue(this.editData.privilegeID);
         }
   }
   addAdmin(){
