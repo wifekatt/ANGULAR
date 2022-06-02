@@ -53,17 +53,18 @@ export class AdminDialogComponent implements OnInit {
   }
   
   updateAdmin(){
-    this.adminApi.updateAdmin(this.editData.id,this.AdminsForm.value)
-    .subscribe({
-      next:(res)=>{
-        alert("user updated successfully")
-        this.AdminsForm.reset();
-        this.dialogRef.close('update');
-      },
-      error:()=>{
-        alert("error while updating the user!!")
+    console.log(this.editData.adminID)
+        this.adminApi.updateAdmin(this.editData.adminID,this.AdminsForm.value)
+        .subscribe({
+          next:(res)=>{
+            alert("user updated successfully")
+            this.AdminsForm.reset();
+            this.dialogRef.close('update');
+          },
+          error:()=>{
+            alert("error while updating the user!!")
+          }
+        })
       }
-    })
-  }
   }
   

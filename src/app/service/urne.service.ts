@@ -17,20 +17,20 @@ export class UrneService {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 
-  getUrneById(urneId: number): Observable<any> {
-    return this.http.get(this.baseUrl + urneId);
+  getUrneById(urneID: number): Observable<any> {
+    return this.http.get(this.baseUrl + urneID);
   }
 
   createUrne(urne: Urne): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, urne);
   }
 
-  updateUrne(urneId: number, urne: Urne): Observable<ApiResponse> {
+  updateUrne(urneID: number, urne: Urne): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.baseUrl + urne.urneID, urne);
   }
 
-  deleteUrne(urneId: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + urneId);
+  deleteUrne(urneID: number): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(this.baseUrl + urneID);
   }
 
 }

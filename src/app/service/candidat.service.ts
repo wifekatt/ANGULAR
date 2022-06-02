@@ -17,20 +17,20 @@ export class CandidatService {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 
-  getCandidatById(candidatId: number): Observable<any> {
-    return this.http.get(this.baseUrl + candidatId);
+  getCandidatById(candidatID: number): Observable<any> {
+    return this.http.get(this.baseUrl + candidatID);
   }
 
   createCandidat(candidat: Candidat): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, candidat);
   }
 
-  updateCandidat(candidatId: number, candidat: Candidat): Observable<ApiResponse> {
+  updateCandidat(candidatID: number, candidat: Candidat): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.baseUrl + candidat.candidatID, candidat);
   }
 
-  deleteCandidat(candidatId: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + candidatId);
+  deleteCandidat(candidatID: number): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(this.baseUrl + candidatID);
   }
 
 }

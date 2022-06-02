@@ -17,20 +17,20 @@ export class VoteService {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 
-  getVoteById(voteId: number): Observable<any> {
-    return this.http.get(this.baseUrl + voteId);
+  getVoteById(voteID: number): Observable<any> {
+    return this.http.get(this.baseUrl + voteID);
   }
 
   createVote(vote: Vote): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, vote);
   }
 
-  updateVote(voteId: number, vote: Vote): Observable<ApiResponse> {
+  updateVote(voteID: number, vote: Vote): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.baseUrl + vote.voteID, vote);
   }
 
-  deleteVote(voteId: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + voteId);
+  deleteVote(voteID: number): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(this.baseUrl + voteID);
   }
 
 }

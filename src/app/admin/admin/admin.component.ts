@@ -59,8 +59,8 @@ export class AdminComponent implements OnInit {
         }
     })
     }
-  deleteAdmin(adminId : number){
-    this.adminApi.deleteAdmin(adminId)
+  deleteAdmin(id : number){
+    this.adminApi.deleteAdmin(id)
     .subscribe({
       next:(res)=>{
         alert("admin deleted successfully");

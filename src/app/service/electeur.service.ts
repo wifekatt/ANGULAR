@@ -17,20 +17,20 @@ export class ElecteurService {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 
-  getElecteurById(electeurId: number): Observable<any> {
-    return this.http.get(this.baseUrl + electeurId);
+  getElecteurById(electeurID: number): Observable<any> {
+    return this.http.get(this.baseUrl + electeurID);
   }
 
   createElecteur(electeur: Electeur): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, electeur);
   }
 
-  updateElecteur(electeurId: number, electeur: Electeur): Observable<ApiResponse> {
+  updateElecteur(electeurID: number, electeur: Electeur): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.baseUrl + electeur.electeurID, electeur);
   }
 
-  deleteElecteur(electeurId: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + electeurId);
+  deleteElecteur(electeurID: number): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(this.baseUrl + electeurID);
   }
 
 }
