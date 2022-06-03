@@ -26,7 +26,7 @@ export class AdminService {
   }
 
   updateAdmin(adminID: number, admin: Admin): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + admin.adminID, admin);
+    return this.http.put<ApiResponse>(this.baseUrl + adminID, admin);
   }
 
   deleteAdmin(adminID: number): Observable<ApiResponse> {
