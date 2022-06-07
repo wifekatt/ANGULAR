@@ -29,7 +29,6 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/demo.css",
-              "src/assets/scss/material-dashboard.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.min.css"
 

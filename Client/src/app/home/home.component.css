@@ -23,6 +23,11 @@ a {
   text-decoration: none;
   transition: 0.3s all ease;
 }
+.profile-image-pic{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
 
 a:hover {
   color: #000;
@@ -541,10 +546,10 @@ section {
 }
 #header .logo h1 {
   font-size: 28px;
-  margin: 0;
+  margin-top: 20px;
   padding: 4px 0;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 700;
 }
 #header .logo h1 a, #header .logo h1 a:hover {
   color: #fff;
@@ -552,8 +557,8 @@ section {
 }
 #header .logo img {
   padding: 0;
-  margin: 0;
-  max-height: 40px;
+  margin-top: 0;
+  max-height: 70px;
 }
 
 /*--------------------------------------------------------------
