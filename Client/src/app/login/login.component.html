@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="card my-5">
-
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
           <form class="card-body cardbody-color p-lg-5">
             <!--
             <div class="row"><button type="submit" class="btn btn-color  w-50">Admin</button>
@@ -18,7 +19,7 @@
             <div class="mb-3">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>CIN</mat-label>
-                <input type="CIN" matInput [formControl]="CINFormControl" placeholder="Ex. 55555555">
+                <input id="CIN" type="CIN" matInput [formControl]="CINFormControl" [(ngModel)]="CIN" placeholder="Ex. 55555555">
                 <mat-error *ngIf="CINFormControl.hasError('CIN') && !CINFormControl.hasError('required')">
                   Please enter a valid CIN number
                 </mat-error>
@@ -30,7 +31,7 @@
             <div class="mb-3">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                <input id="email" type="email" matInput [formControl]="emailFormControl" [(ngModel)]="email" placeholder="Ex. pat@example.com">
                 <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                   Please enter a valid email address
                 </mat-error>
@@ -40,7 +41,7 @@
               </mat-form-field>
             </div>
 
-            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100" (click)="handleLogin()">Login</button></div>
 
         </form>
         </div>
