@@ -79,6 +79,7 @@ section {
   background: linear-gradient(-45deg, #3db3c5, #274685);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: normal;
 }
 
 /*--------------------------------------------------------------
@@ -831,7 +832,7 @@ section {
   }
 }
 .hero-section .iphone-wrap .phone-2 {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-left: 50px;
   width: 720px;
 }
@@ -851,7 +852,8 @@ section {
   padding: 5rem 0 2.5rem 0;
 }
 .footer h3 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 .footer ul li {
