@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Electeur } from '../class/electeur';
-import { AuthService } from '../service/AuthService';
+import { AuthService } from '../service/auth-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,30 +9,19 @@ import { AuthService } from '../service/AuthService';
 })
 export class LoginComponent implements OnInit {
 
-  email!: Electeur["email"];
-  CIN!: Electeur["CIN"];
-errorMessage = 'Invalid Credentials';
-successMessage!: string;
-invalidLogin = false;
-loginSuccess = false;
+electeur:Electeur = new Electeur();
 
   constructor(private authService: AuthService) { }
-
 
   ngOnInit(): void {
   }
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   CINFormControl = new FormControl('', [Validators.required]);
-
-  handleLogin() {
-    this.authService.login(this.CIN, this.email).subscribe((result) => {
-      this.invalidLogin = false;
-      this.loginSuccess = true;
-      this.successMessage = 'Login Successful';
-      // redirect to main page
-    }, () => {
-      this.invalidLogin = true;
-      this.loginSuccess = false;
-    });
+  userLogin(){
+console.log(this.electeur);
+this.authService.login(this.electeur).subscribe(data=>{
+  alert("login successfully")
+  },error=>alert("Cin or Email are not valid"));
   }
+
 }

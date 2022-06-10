@@ -11,5 +11,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  navigateToSection(Section:string){
+    window.location.hash='';
+    window.location.hash=Section;
+
+  }
 
 }
