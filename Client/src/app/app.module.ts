@@ -10,6 +10,11 @@ import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { VoteType1Component } from './vote/vote-type1/vote-type1.component';
+import { VoteType2Component } from './vote/vote-type2/vote-type2.component';
+import { VoteListComponent } from './vote/vote-list/vote-list.component';
+import { VoteSuccessComponent } from './vote/vote-success/vote-success.component';
+import { VotePersonDetailsComponent } from './vote/vote-person-details/vote-person-details.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
@@ -34,7 +39,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    VoteType1Component,
+    VoteType2Component,
+    VoteListComponent,
+    VoteSuccessComponent,
+    VotePersonDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -64,8 +74,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
      MatButtonToggleModule,
      MatCardModule,
      MatGridListModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MatTableModule]
 })
 export class AppModule { }
