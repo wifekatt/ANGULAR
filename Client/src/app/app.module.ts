@@ -33,7 +33,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -74,6 +74,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
      MatButtonToggleModule,
      MatCardModule,
      MatGridListModule,
+     MatToolbarModule,
 
   ],
   providers: [],

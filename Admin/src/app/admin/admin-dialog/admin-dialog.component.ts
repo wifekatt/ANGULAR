@@ -57,12 +57,12 @@ export class AdminDialogComponent implements OnInit {
         this.adminApi.updateAdmin(this.editData.adminID,this.AdminsForm.value)
         .subscribe({
           next:(res)=>{
-            alert("user updated successfully")
+            alert("Admin updated successfully")
             this.AdminsForm.reset();
             this.dialogRef.close('update');
           },
           error:()=>{
-            alert("error while updating the user!!")
+            alert("error while updating the Admin!!")
           }
         })
       }
