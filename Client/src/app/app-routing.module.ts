@@ -8,6 +8,7 @@ import { VotePersonDetailsComponent } from './vote/vote-person-details/vote-pers
 import { VoteSuccessComponent } from './vote/vote-success/vote-success.component';
 import { VoteType1Component } from './vote/vote-type1/vote-type1.component';
 import { VoteType2Component } from './vote/vote-type2/vote-type2.component';
+import { VoteType3Component } from './vote/vote-type3/vote-type3.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full',},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"votefront", component: VoteFrontpageComponent},
   {path:"vote1", component: VoteType1Component},
   {path:"vote2", component: VoteType2Component},
+  {path:"vote3", component: VoteType3Component},
   {path:"votelist", component: VoteListComponent},
   {path:"voteperson", component: VotePersonDetailsComponent},
   {path:"votesuccess", component: VoteSuccessComponent},

@@ -6,11 +6,9 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DataTablesModule } from 'angular-datatables';
 import { MatTableModule } from '@angular/material/table';
 
-import { LoginComponent } from './login/login.component';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -28,6 +26,9 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 @NgModule({
   imports: [
@@ -64,7 +65,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent,
+    LoginAdminComponent,
 
   ],
   providers: [],

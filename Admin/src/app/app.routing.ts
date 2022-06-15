@@ -4,12 +4,13 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { LoginComponent } from './login/login.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'loginAdmin',
     pathMatch: 'full',
   }, {
     path: '',
@@ -19,7 +20,7 @@ const routes: Routes =[
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
   },
-  { path: 'login', component: LoginComponent},
+  { path: 'loginAdmin', component: LoginAdminComponent},
 ];
 
 @NgModule({

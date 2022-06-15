@@ -15,6 +15,8 @@ import { VoteType2Component } from './vote/vote-type2/vote-type2.component';
 import { VoteListComponent } from './vote/vote-list/vote-list.component';
 import { VoteSuccessComponent } from './vote/vote-success/vote-success.component';
 import { VotePersonDetailsComponent } from './vote/vote-person-details/vote-person-details.component';
+import { VoteFrontpageComponent } from './vote/vote-frontpage/vote-frontpage.component';
+
 
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
@@ -34,6 +36,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { VoteType3Component } from './vote/vote-type3/vote-type3.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     VoteType2Component,
     VoteListComponent,
     VoteSuccessComponent,
-    VotePersonDetailsComponent
+    VotePersonDetailsComponent,
+    VoteFrontpageComponent,
+    VoteType3Component
   ],
   imports: [
     BrowserModule,
