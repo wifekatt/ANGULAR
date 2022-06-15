@@ -5,19 +5,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div>
-        <mat-toolbar color="primary">
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>My App</span>
-          <span class="example-spacer"></span>
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
-          </button>
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
-          </button>
-        </mat-toolbar>
+
       </div>
       <div class="logo">
 
@@ -55,8 +43,53 @@
 
             <div class="col-lg-11 iphone-wrap">
 
-
-
+              <mat-grid-list cols="3" rowHeight="3:3">
+                <mat-grid-tile>
+                    <div class="img-card iCard-style3">
+                        <div class="card-content">
+                            <div class="card-image">
+                                <span class="card-title">Urne 1</span>
+                                <img src="../../assets/img/urne1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="card-link">
+                            <a routerLink="/vote1" title="Open Vote">
+                                <span>Open Vote</span>
+                            </a>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="img-card iCard-style3">
+                        <div class="card-content">
+                            <div class="card-image">
+                                <span class="card-title">Urne 2</span>
+                                <img src="../../assets/img/urne1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="card-link">
+                            <a routerLink="/vote2" title="Open Vote">
+                                <span>Open Vote</span>
+                            </a>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="img-card iCard-style3">
+                        <div class="card-content">
+                            <div class="card-image">
+                                <span class="card-title">Urne 3</span>
+                                <img src="../../assets/img/urne1.jpg"/>
+                            </div>
+                        </div>
+                        <div class="card-link">
+                            <a routerLink="/vote3" title="Open Vote">
+                                <span>Open Vote</span>
+                            </a>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+              </mat-grid-list>
 
 
                 </div>
