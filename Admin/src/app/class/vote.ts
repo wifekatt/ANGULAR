@@ -4,4 +4,7 @@ export class Vote {
 	MaxNumChoices!: number;
 	BeginDate!: Date;
 	ExpiryDate!: Date;
+	urneID!: number;
+
+
 }

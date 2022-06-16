@@ -11,9 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { VoteType1Component } from './vote/vote-type1/vote-type1.component';
 import { VoteType2Component } from './vote/vote-type2/vote-type2.component';
-import { VoteListComponent } from './vote/vote-list/vote-list.component';
 import { VoteSuccessComponent } from './vote/vote-success/vote-success.component';
-import { VotePersonDetailsComponent } from './vote/vote-person-details/vote-person-details.component';
 import { VoteFrontpageComponent } from './vote/vote-frontpage/vote-frontpage.component';
 
 
@@ -38,6 +36,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { VoteType3Component } from './vote/vote-type3/vote-type3.component';
 import { LoginOtpComponent } from './login/login-otp/login-otp.component';
 import { LoginComponent } from './login/login/login.component';
+import { Voteperson1Component } from './vote/voteperson/voteperson1/voteperson1.component';
+import { Voteperson2Component } from './vote/voteperson/voteperson2/voteperson2.component';
+import { Voteperson3Component } from './vote/voteperson/voteperson3/voteperson3.component';
+import { Votelist1Component } from './vote/vote-list/votelist1/votelist1.component';
+import { Votelist2Component } from './vote/vote-list/votelist2/votelist2.component';
+import { Votelist3Component } from './vote/vote-list/votelist3/votelist3.component';
+
 
 @NgModule({
   declarations: [
@@ -45,13 +50,17 @@ import { LoginComponent } from './login/login/login.component';
     HomeComponent,
     VoteType1Component,
     VoteType2Component,
-    VoteListComponent,
     VoteSuccessComponent,
-    VotePersonDetailsComponent,
     VoteFrontpageComponent,
     VoteType3Component,
     LoginOtpComponent,
-    LoginComponent
+    LoginComponent,
+    Voteperson1Component,
+    Voteperson2Component,
+    Voteperson3Component,
+    Votelist1Component,
+    Votelist2Component,
+    Votelist3Component
   ],
   imports: [
     BrowserModule,

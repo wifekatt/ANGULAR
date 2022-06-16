@@ -780,10 +780,10 @@ section {
   }
 }
 .hero-section h1 {
-  font-size: 3.5rem;
-  color: #fff;
-  font-weight: 700;
-  margin-bottom: 30px;
+  font-size: 3rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 @media screen and (max-width: 992px) {
   .hero-section h1 {

@@ -919,7 +919,7 @@ section {
   }
 
   .img-card .card-image img {
-    width: 100%;
+    width: 83%;
     border-radius: 5px 5px 0px 0px;
 
     -webkit-transition: all 0.8s;
@@ -984,6 +984,7 @@ section {
     font-family: "Roboto", sans-serif;
     z-index: 1;
     font-weight: bold;
+    margin-left: -70px;
   }
 
   .img-card.iCard-style3 .card-text {
