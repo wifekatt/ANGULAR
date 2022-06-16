@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { VoteType1Component } from './vote/vote-type1/vote-type1.component';
 import { VoteType2Component } from './vote/vote-type2/vote-type2.component';
@@ -37,11 +36,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { VoteType3Component } from './vote/vote-type3/vote-type3.component';
+import { LoginOtpComponent } from './login/login-otp/login-otp.component';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
     VoteType1Component,
     VoteType2Component,
@@ -49,7 +49,9 @@ import { VoteType3Component } from './vote/vote-type3/vote-type3.component';
     VoteSuccessComponent,
     VotePersonDetailsComponent,
     VoteFrontpageComponent,
-    VoteType3Component
+    VoteType3Component,
+    LoginOtpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
