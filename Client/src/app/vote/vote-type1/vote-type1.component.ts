@@ -12,4 +12,5 @@ export class VoteType1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  doc = "";
 }

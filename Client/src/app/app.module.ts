@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 import { HomeComponent } from './home/home.component';
 import { VoteType1Component } from './vote/vote-type1/vote-type1.component';
@@ -70,6 +72,7 @@ import { Votelist3Component } from './vote/vote-list/votelist3/votelist3.compone
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
+    PdfViewerModule,
 
      // * MATERIAL IMPORTS
 
