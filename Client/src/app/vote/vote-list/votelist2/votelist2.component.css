@@ -1000,3 +1000,13 @@ section {
   .img-card.iCard-style3 .card-link a:after {
     background: #000000;
   }
+
+
+  .example-container {
+    height: 400px;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+  }
