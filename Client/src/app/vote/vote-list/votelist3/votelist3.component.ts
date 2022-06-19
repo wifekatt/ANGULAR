@@ -6,14 +6,14 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Sahbi Atig'},
-  {id: 2, name: 'Mahdi Ben Ayed'},
-  {id: 3, name: 'Yosra Bou Selmi'},
-  {id: 4, name: 'Abderrazek Hsin'},
-  {id: 5, name: 'Wasila Barouni'},
-  {id: 6, name: 'Fathi Haj Hamouda'},
-  {id: 7, name: 'Jamila Debch'},
-  {id: 8, name: 'Ameni Dridri'},
+  {id: 1, name: 'Karim Hleli'},
+  {id: 2, name: 'Kaouther Soualhi'},
+  {id: 3, name: 'Selim Bohli'},
+  {id: 4, name: 'Selima Arous'},
+  {id: 5, name: 'JamelAbdennasser Ouardeine'},
+  {id: 6, name: 'Manel Rhouma'},
+  {id: 7, name: 'Mohammed Sabri Ben Maiz'},
+  {id: 8, name: 'Amel Gargouri'},
   ];
 @Component({
   selector: 'app-votelist3',

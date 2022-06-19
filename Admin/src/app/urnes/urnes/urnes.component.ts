@@ -46,32 +46,23 @@ export class UrnesComponent implements OnInit {
 
             },
             error:(err)=>{
-              alert("error while fetching the records!!")
+             
             }
           })
   }
 
-  editUrne(row : any){
+  editUrne(){
     this.dialog.open(UrnesDialogComponent,{
     width:'30%',
-    data:row
+
     }).afterClosed().subscribe(val=>{
       if(val === 'update'){
         this.getAllLists();
         }
     })
     }
-    deleteUrne(id : number){
-    this.urneApi.deleteUrne(id)
-    .subscribe({
-      next:(res)=>{
-        alert("urne deleted successfully");
-        this.getAllLists();
-      },
-      error:()=>{
-        alert("error while deleting the urne!!")
-      }
-    })
+    deleteUrne(){
+    
 
   }
   applyFilter(event: Event) {

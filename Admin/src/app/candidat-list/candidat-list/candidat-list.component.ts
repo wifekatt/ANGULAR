@@ -21,7 +21,6 @@ export class CandidatListComponent implements OnInit {
   constructor(private dialog: MatDialog , private listApi : CandidatListService) { }
 
   ngOnInit(): void {
-    this.getAllLists();
   }
  
 
@@ -30,11 +29,11 @@ export class CandidatListComponent implements OnInit {
       width:'30%'
     }).afterClosed().subscribe(val=>{
       if(val === 'save'){
-        this.getAllLists();
+        
         }
     })
   }
-
+/*
   getAllLists(){
     this.listApi.getListCandidats()
           .subscribe({
@@ -50,14 +49,14 @@ export class CandidatListComponent implements OnInit {
             }
           })
   }
-
+*/
   editList(row : any){
     this.dialog.open(CandidatListDialogComponent,{
     width:'30%',
     data:row
     }).afterClosed().subscribe(val=>{
       if(val === 'update'){
-        this.getAllLists();
+        
         }
     })
     }
@@ -66,7 +65,7 @@ export class CandidatListComponent implements OnInit {
     .subscribe({
       next:(res)=>{
         alert("list deleted successfully");
-        this.getAllLists();
+       
       },
       error:()=>{
         alert("error while deleting the list!!")

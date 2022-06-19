@@ -57,12 +57,12 @@ updateAdmin(){
   this.adminApi.putAdmin(this.AdminsForm.value,this.editData.id)
   .subscribe({
     next:(res)=>{
-      alert("user updated successfully")
+      alert("admin updated successfully")
       this.AdminsForm.reset();
       this.dialogRef.close('update');
     },
     error:()=>{
-      alert("error while updating the user!!")
+      alert("error while updating the admin!!")
     }
   })
 }

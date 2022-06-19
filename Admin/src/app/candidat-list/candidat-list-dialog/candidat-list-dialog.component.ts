@@ -17,6 +17,7 @@ export class CandidatListDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public editData : any,
     private dialogRef : MatDialogRef<CandidatListDialogComponent>) { }
 
+    
     ngOnInit(): void {
       this.ListsForm = this.formBuilder.group({
         listName : ['',Validators.required],

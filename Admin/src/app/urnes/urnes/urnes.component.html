@@ -4,59 +4,69 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title">Urnes
-                        <button mat-raised-button class="btn-color pull-right" (click)="openDialog()">Add Urne</button></h4>
-                        <p class="card-category"> Urnes Grid</p>                    
+                        <h4 class="card-title">Ballot boxes
+                        <button mat-raised-button class="btn-color pull-right" (click)="openDialog()">Add ballot box</button></h4>
+                        <p class="card-category"> Ballot boxes Grid</p>                    
                     </div>
                     <div class="card-body">
-                        <mat-grid-list cols="3" rowHeight="3:3">
+                        <mat-grid-list cols="2" rowHeight="3:2">
                             <mat-grid-tile>
                                 <div class="img-card iCard-style3">
                                     <div class="card-content">
                                         <div class="card-image">
-                                            <span class="card-title">Urne 1</span>
+                                            <span class="card-title">Ballot box 1</span>
                                             <img src="../../assets/img/urne1.jpg"/>
-                                        </div>  
+                                        </div>
                                     </div>
+                                    <div class="card-text">
+                                      <p><br>
+                                        الانتخابات التشريعية <br>
+                                        legislative elections
+                                      </p>
+                                  </div>
                                     <div class="card-link">
-                                        <a routerLink="/vote" title="Open Vote">
-                                            <span>Open Urne</span>
+                                        <a routerLink="/candidat-list" title="Open Vote" style="margin-right:8px ;">
+                                            <span>Open ballot box</span>
                                         </a>
+                                        <button mat-icon-button (click)="editUrne()" color="primary">
+                                            <mat-icon>edit</mat-icon>
+                                          </button>
+                                          <button mat-icon-button (click)="deleteUrne()" color="warn">
+                                            <mat-icon>delete</mat-icon>
+                                          </button>
                                     </div>
-                                </div>   
+                                </div>
                             </mat-grid-tile>
                             <mat-grid-tile>
                                 <div class="img-card iCard-style3">
                                     <div class="card-content">
                                         <div class="card-image">
-                                            <span class="card-title">Urne 2</span>
+                                            <span class="card-title">Ballot box 2</span>
                                             <img src="../../assets/img/urne1.jpg"/>
-                                        </div>  
+                                        </div>
                                     </div>
-                                    <div class="card-link">
-                                        <a routerLink="/vote" title="Open Vote">
-                                            <span>Open Urne</span>
-                                        </a>
-                                    </div>
-                                </div> 
+                                    <div class="card-text">
+                                      <p><br>
+                                        الانتخابات الرئاسية  <br>
+                                        Presidential election
+                                      </p>
+                                  </div>
+                                  <div class="card-link">
+                                    <a routerLink="/candidatvote" title="Open Vote" style="margin-right:8px ;">
+                                        <span>Open Ballot box</span>
+                                    </a>
+                                    <button mat-icon-button (click)="editUrne()" color="primary">
+                                        <mat-icon>edit</mat-icon>
+                                      </button>
+                                      <button mat-icon-button (click)="deleteUrne()" color="warn">
+                                        <mat-icon>delete</mat-icon>
+                                      </button>
+                                </div>
+                                </div>
                             </mat-grid-tile>
-                            <mat-grid-tile>
-                                <div class="img-card iCard-style3">
-                                    <div class="card-content">
-                                        <div class="card-image">
-                                            <span class="card-title">Urne 3</span>
-                                            <img src="../../assets/img/urne1.jpg"/>
-                                        </div>  
-                                    </div>
-                                    <div class="card-link">
-                                        <a routerLink="/vote" title="Open Vote">
-                                            <span>Open Urne</span>
-                                        </a>
-                                    </div>
-                                </div>    
-                            </mat-grid-tile>
-                          </mat-grid-list>    
-
+          
+                          </mat-grid-list>
+          
                     </div>
                 </div>
             </div>

@@ -5,6 +5,19 @@ import { AdminApiService } from '../../services/admin-api.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+
+export interface PeriodicElement {
+  adminID: number;
+  adminName: string;
+  adminPassword: string;
+  privilegeID: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {adminID: 1, adminName: 'wifek attia',adminPassword: 'w5055',privilegeID: 1},
+  {adminID: 2, adminName: 'sami hamdaoui',adminPassword: 's2012',privilegeID: 2},
+  {adminID: 3, adminName: 'naoufel ghalleb',adminPassword: '5412d',privilegeID: 1},
+];
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -13,18 +26,17 @@ import {MatTableDataSource} from '@angular/material/table';
 export class AdminComponent implements OnInit {
 
   sideBarOpen = true;
-  displayedColumns: string[] = ['FullName', 'Password', 'PrivilegeID','action'];
-  dataSource!: MatTableDataSource<any>;
+  displayedColumns: string[] = ['id','FullName', 'Password', 'PrivilegeID','action'];
+  dataSource= ELEMENT_DATA;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private dialog: MatDialog , private adminApi : AdminApiService) {
-
+    
   }
 
   ngOnInit(): void {
-    this.getAllAdmins();
   }
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
@@ -35,11 +47,11 @@ export class AdminComponent implements OnInit {
       width:'30%'
     }).afterClosed().subscribe(val=>{
       if(val === 'save'){
-        this.getAllAdmins();
+        
         }
     })
   }
-
+/*
   getAllAdmins(){
     this.adminApi.getAdmin()
           .subscribe({
@@ -54,14 +66,14 @@ export class AdminComponent implements OnInit {
             }
           })
   }
-
+*/
   editAdmin(row : any){
     this.dialog.open(AdminDialogComponent,{
     width:'30%',
     data:row
     }).afterClosed().subscribe(val=>{
       if(val === 'update'){
-        this.getAllAdmins();
+        
         }
     })
     }
@@ -70,7 +82,7 @@ export class AdminComponent implements OnInit {
     .subscribe({
       next:(res)=>{
         alert("admin deleted successfully");
-        this.getAllAdmins();
+        
       },
       error:()=>{
         alert("error while deleting the admin!!")
@@ -78,6 +90,7 @@ export class AdminComponent implements OnInit {
     })
 
   }
+  /*
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -86,7 +99,7 @@ export class AdminComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+*/
 }
 
 
