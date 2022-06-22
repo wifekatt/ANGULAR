@@ -15,7 +15,7 @@ electeur:Electeur = new Electeur();
 
   ngOnInit(): void {
   }
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  userIdFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.required]);
   userLogin(){
 console.log(this.electeur);

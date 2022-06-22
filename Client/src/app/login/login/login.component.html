@@ -29,17 +29,17 @@
               <div class="mb-3">
                 <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>Email</mat-label>
-                  <input id="email" name="email" type="email" matInput [formControl]="emailFormControl" [(ngModel)]="electeur.email" placeholder="Ex. pat@example.com">
-                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  <input id="userId" name="userId" type="email" matInput [formControl]="userIdFormControl" [(ngModel)]="electeur.userId" placeholder="Ex. pat@example.com">
+                  <mat-error *ngIf="userIdFormControl.hasError('userId') && !userIdFormControl.hasError('required')">
                     Please enter a valid email address
                   </mat-error>
-                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                  <mat-error *ngIf="userIdFormControl.hasError('required')">
                     Email is <strong>required</strong>
                   </mat-error>
                 </mat-form-field>
               </div>
 
-              <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100" routerLink="/loginotp">Login</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
 
           </form>
           </div>

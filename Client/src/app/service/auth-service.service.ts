@@ -18,6 +18,5 @@ export class AuthService {
     return this.http.post(`${this.baseUrl}`,electeur);
 
   }
-
 }
 

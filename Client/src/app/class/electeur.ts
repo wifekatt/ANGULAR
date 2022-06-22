@@ -1,4 +1,4 @@
 export class Electeur {
-  email!: string;
+  userId!: string;
 	password!: string;
 }
