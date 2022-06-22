@@ -24,7 +24,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {electeurID: 2, FullName: 'sami hamdaoui',Email: 'samihamdaoui997@gmail.com',Telephone: '29839350',CIN:11098740, Pid : '110', Zip_code:"3020", Bank_code:'1125478102', Language:'AR'},
   {electeurID: 3, FullName: 'seli attia',Email: 'seliattia09@gmail.com',Telephone: '23728680',CIN:14241536, Pid : '100', Zip_code:"5020", Bank_code:'1254789654', Language:'FR'},
   {electeurID: 4, FullName: 'essil attia',Email: 'essilat102@gmail.com',Telephone: '94125785',CIN:14241685, Pid : '410', Zip_code:"4000", Bank_code:'1452365487', Language:'EN'},
-  {electeurID: 5, FullName: 'rami hamdaoui',Email: 'ramihamdaoui@gmail.com',Telephone: '21402574',CIN:10210254, Pid : '140', Zip_code:"3000", Bank_code:'1578411203', Language:'AR'},
+  {electeurID: 5, FullName: 'rami hamdaoui',Email: 'ramihamdaoui@gmail.com',Telephone: '21402574',CIN:10210254, Pid : '141', Zip_code:"3000", Bank_code:'1578411203', Language:'AR'},
 ];
 @Component({
   selector: 'app-electeur',
@@ -54,7 +54,8 @@ export class ElecteurComponent implements OnInit {
     })
   }
 
- /* getAllElecteurs(){
+ /*
+  getAllElecteurs(){
     this.electeurApi.getElecteurs()
           .subscribe({
             next:(res:any)=>{
@@ -81,18 +82,11 @@ export class ElecteurComponent implements OnInit {
     })
     }
   deleteElecteur(id : number){
-    this.electeurApi.deleteElecteur(id)
-    .subscribe({
-      next:(res)=>{
-        alert("electeur deleted successfully");
-      //  this.getAllElecteurs();
-      },
-      error:()=>{
-        alert("error while deleting the electeur!!")
-      }
-    })
-
-  }/*
+    
+        alert("user deleted successfully");
+      
+  }
+  /*
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -103,4 +97,3 @@ export class ElecteurComponent implements OnInit {
   }
 */
 }
-

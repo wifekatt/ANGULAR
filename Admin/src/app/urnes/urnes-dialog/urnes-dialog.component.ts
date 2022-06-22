@@ -28,39 +28,16 @@ export class UrnesDialogComponent implements OnInit {
         }
   }
   addUrne(){
-    if(!this.editData){
-      if(this.UrnesForm.valid){
-        this.UrneApi.createUrne(this.UrnesForm.value)
-        .subscribe({
-          next:(res)=>{
-            alert("Urne added successfully")
-            this.UrnesForm.reset();
-            this.dialogRef.close('save');
-          },
-          error:()=>{
-            alert("error while adding the Urne!!")
-          }
-        })
-      }
-    }else{
-      this.updateUrne();
-    }
+   
+            alert("Ballot box added successfully")
+            
   
   }
   
   updateUrne(){
-    console.log(this.editData.urneID)
-        this.UrneApi.updateUrne(this.editData.urneID,this.UrnesForm.value)
-        .subscribe({
-          next:(res)=>{
-            alert("Urne updated successfully")
-            this.UrnesForm.reset();
-            this.dialogRef.close('update');
-          },
-          error:()=>{
-            alert("error while updating the Urne!!")
-          }
-        })
-      }
+   
+            alert("Ballot box updated successfully")
+            
   }
+}
   

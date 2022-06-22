@@ -17,11 +17,11 @@
               <div class="mb-3">
                 <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>CIN</mat-label>
-                  <input id="CIN" name="CIN" type="text" matInput [formControl]="CINFormControl" [(ngModel)]="electeur.CIN" placeholder="Ex. 55555555">
-                  <mat-error *ngIf="CINFormControl.hasError('CIN') && !CINFormControl.hasError('required')">
+                  <input id="password" name="password" type="password" matInput [formControl]="passwordFormControl" [(ngModel)]="electeur.password" placeholder="Ex. 55555555">
+                  <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
                     Please enter a valid CIN number
                   </mat-error>
-                  <mat-error *ngIf="CINFormControl.hasError('required')">
+                  <mat-error *ngIf="passwordFormControl.hasError('required')">
                     CIN is <strong>required</strong>
                   </mat-error>
                 </mat-form-field>

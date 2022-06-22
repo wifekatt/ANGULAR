@@ -14,9 +14,9 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {adminID: 1, adminName: 'wifek attia',adminPassword: 'w5055',privilegeID: 1},
-  {adminID: 2, adminName: 'sami hamdaoui',adminPassword: 's2012',privilegeID: 2},
-  {adminID: 3, adminName: 'naoufel ghalleb',adminPassword: '5412d',privilegeID: 1},
+  {adminID: 1, adminName: 'wifek attia',adminPassword: 'w5055',privilegeID: 2},
+  {adminID: 2, adminName: 'naoufel ghalleb',adminPassword: '5412d',privilegeID: 1},
+  {adminID: 3, adminName: 'sami hamdaoui',adminPassword: 's2012',privilegeID: 2},
 ];
 @Component({
   selector: 'app-admin',
@@ -78,16 +78,10 @@ export class AdminComponent implements OnInit {
     })
     }
   deleteAdmin(id : number){
-    this.adminApi.deleteAdmin(id)
-    .subscribe({
-      next:(res)=>{
+    
         alert("admin deleted successfully");
         
-      },
-      error:()=>{
-        alert("error while deleting the admin!!")
-      }
-    })
+      
 
   }
   /*

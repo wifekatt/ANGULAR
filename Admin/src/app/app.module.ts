@@ -29,6 +29,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { PrivilegeDialogComponent } from './privilege-dialog/privilege-dialog.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -65,6 +66,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppComponent,
     AdminLayoutComponent,
     LoginAdminComponent,
+    PrivilegeDialogComponent,
     
 
   ],

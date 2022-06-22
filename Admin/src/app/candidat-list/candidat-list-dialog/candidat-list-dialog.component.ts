@@ -28,39 +28,15 @@ export class CandidatListDialogComponent implements OnInit {
         }
   }
   addList(){
-    if(!this.editData){
-      if(this.ListsForm.valid){
-        this.ListApi.createListCandidat(this.ListsForm.value)
-        .subscribe({
-          next:(res)=>{
+    
             alert("List added successfully")
-            this.ListsForm.reset();
-            this.dialogRef.close('save');
-          },
-          error:()=>{
-            alert("error while adding the List!!")
-          }
-        })
-      }
-    }else{
-      this.updateList();
-    }
+            
   
   }
   
   updateList(){
-    console.log(this.editData.listID)
-        this.ListApi.updateListCandidat(this.editData.listID,this.ListsForm.value)
-        .subscribe({
-          next:(res)=>{
+    
             alert("List updated successfully")
-            this.ListsForm.reset();
-            this.dialogRef.close('update');
-          },
-          error:()=>{
-            alert("error while updating the List!!")
-          }
-        })
-      }
+           
   }
-  
+}

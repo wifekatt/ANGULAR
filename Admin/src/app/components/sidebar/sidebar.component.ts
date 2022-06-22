@@ -12,7 +12,10 @@ export const ROUTES: RouteInfo[] = [
     { path: '/urnes', title: 'Ballot boxes',  icon:'dashboard', class: '' },
     { path: '/candidat-list', title: 'Candidate lists',  icon:'library_books', class: '' },
     { path: '/admin', title: 'Admins',  icon:'supervisor_account', class: '' },
+    //{ path: '/privilege', title: 'admin privilege',  icon:'stars', class: '' },
     { path: '/electeur', title: 'Users',  icon:'people', class: '' },
+   // { path: '/result', title: 'results',  icon:'print', class: '' },
+    
     
   ];
 

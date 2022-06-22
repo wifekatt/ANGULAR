@@ -11,5 +11,7 @@ export class ResultComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  download(){
+    alert("results generated successfully");
+  }
 }

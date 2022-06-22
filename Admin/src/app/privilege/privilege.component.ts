@@ -1,44 +1,50 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { CandidatDialogComponent } from '../candidat-dialog/candidat-dialog.component';
-import { CandidatService } from '../../service/candidat.service';
+import { PrivilegeDialogComponent } from '../privilege-dialog/privilege-dialog.component';
+import { AdminApiService } from '.././services/admin-api.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
 export interface PeriodicElement {
-  candidatID: number;
-  candidatName: string;
-  
+  privilegeID: number;
+	privilegeName: string;
+	reead: boolean;
+	wriite: boolean;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {candidatID: 1, candidatName: 'Nabil Karoui'},
-  {candidatID: 2, candidatName: 'Kais Saied'},
+  {privilegeID: 1, privilegeName: 'responsable',reead: true,wriite: true},
+ // {privilegeID: 2, privilegeName: 'adminn',reead: true,wriite: false},
   
 ];
-
 @Component({
-  selector: 'app-candidat',
-  templateUrl: './candidat.component.html',
-  styleUrls: ['./candidat.component.css']
+  selector: 'app-privilege',
+  templateUrl: './privilege.component.html',
+  styleUrls: ['./privilege.component.css']
 })
-export class CandidatComponent implements OnInit {
+export class PrivilegeComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'FullName','action'];
+  sideBarOpen = true;
+  displayedColumns: string[] = ['id','FullName', 'reead', 'wriite','action'];
   dataSource= ELEMENT_DATA;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private dialog: MatDialog , private CandidatApi : CandidatService) { }
 
-  ngOnInit(): void {
+  constructor(private dialog: MatDialog , private adminApi : AdminApiService) {
     
   }
- 
+
+  ngOnInit(): void {
+  }
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 
   openDialog() {
-    this.dialog.open(CandidatDialogComponent, {
+    this.dialog.open(PrivilegeDialogComponent, {
       width:'30%'
     }).afterClosed().subscribe(val=>{
       if(val === 'save'){
@@ -47,11 +53,10 @@ export class CandidatComponent implements OnInit {
     })
   }
 /*
-  getAllCandidats(){
-    this.CandidatApi.getCandidats()
+  getAllAdmins(){
+    this.adminApi.getAdmin()
           .subscribe({
-            next:(res:any)=>{
-              console.log(JSON.stringify(res));
+            next:(res)=>{
               this.dataSource = new MatTableDataSource(res);
               this.dataSource.paginator = this.paginator;
               this.dataSource.sort = this.sort;
@@ -63,29 +68,21 @@ export class CandidatComponent implements OnInit {
           })
   }
 */
-  editCandidat(){
-    this.dialog.open(CandidatDialogComponent,{
+  editAdmin(row : any){
+    this.dialog.open(PrivilegeDialogComponent,{
     width:'30%',
-    //data:row
+    data:row
     }).afterClosed().subscribe(val=>{
       if(val === 'update'){
         
         }
     })
     }
-  deleteCandidat(){
-    alert("Candidat deleted successfully");
-   /* this.CandidatApi.deleteCandidat(id)
-    .subscribe({
-      next:(res)=>{
-        alert("Candidat deleted successfully");
-       
-      },
-      error:()=>{
-        alert("error while deleting the Candidat!!")
-      }
-    })
-*/
+  deleteAdmin(id : number){
+    
+        alert("privilege deleted successfully");
+        
+
   }
   /*
   applyFilter(event: Event) {
@@ -98,4 +95,10 @@ export class CandidatComponent implements OnInit {
   }
 */
 }
+
+
+
+
+
+
 

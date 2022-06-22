@@ -27,39 +27,15 @@ export class CandidatDialogComponent implements OnInit {
         }
   }
   addCandidat(){
-    if(!this.editData){
-      if(this.CandidatsForm.valid){
-        this.CandidatApi.createCandidat(this.CandidatsForm.value)
-        .subscribe({
-          next:(res)=>{
+    
             alert("Candidat added successfully")
-            this.CandidatsForm.reset();
-            this.dialogRef.close('save');
-          },
-          error:()=>{
-            alert("error while adding the Candidat!!")
-          }
-        })
-      }
-    }else{
-      this.updateCandidat();
-    }
+            
   
   }
   
   updateCandidat(){
-    console.log(this.editData.CandidatID)
-        this.CandidatApi.updateCandidat(this.editData.CandidatID,this.CandidatsForm.value)
-        .subscribe({
-          next:(res)=>{
+    
             alert("Candidat updated successfully")
-            this.CandidatsForm.reset();
-            this.dialogRef.close('update');
-          },
-          error:()=>{
-            alert("error while updating the Candidat!!")
-          }
-        })
-      }
+            
   }
-  
+}

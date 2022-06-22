@@ -10,6 +10,8 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { CandidatList1Component } from '../../candidat/candidat-list/candidat-list1/candidat-list1.component';
 import { CandidatList2Component } from '../../candidat/candidat-list/candidat-list2/candidat-list2.component';
 import { CandidatList3Component } from '../../candidat/candidat-list/candidat-list3/candidat-list3.component';
+import { ResultComponent } from '../../result/result.component';
+import { PrivilegeComponent } from '../../privilege/privilege.component';
 
 export const AdminLayoutRoutes: Routes = [
    
@@ -19,7 +21,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'candidat-list', component: CandidatListComponent },
     { path: 'electeur', component: ElecteurComponent },
     { path: 'urnes', component: UrnesComponent },
-    
+    {path: 'result', component: ResultComponent},
+    {path: 'privilege', component: PrivilegeComponent},
     {path: 'candidat1', component: CandidatList1Component},
     {path: 'candidat2', component: CandidatList2Component},
     {path: 'candidat3', component: CandidatList3Component},

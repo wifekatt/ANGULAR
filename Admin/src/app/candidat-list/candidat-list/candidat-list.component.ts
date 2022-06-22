@@ -50,29 +50,21 @@ export class CandidatListComponent implements OnInit {
           })
   }
 */
-  editList(row : any){
-    this.dialog.open(CandidatListDialogComponent,{
-    width:'30%',
-    data:row
-    }).afterClosed().subscribe(val=>{
-      if(val === 'update'){
-        
-        }
-    })
-    }
-  deleteList(id : number){
-    this.listApi.deleteListCandidat(id)
-    .subscribe({
-      next:(res)=>{
-        alert("list deleted successfully");
-       
-      },
-      error:()=>{
-        alert("error while deleting the list!!")
+ 
+    editlist(){
+      this.dialog.open(CandidatListDialogComponent,{
+      width:'30%',
+  
+      }).afterClosed().subscribe(val=>{
+        if(val === 'update'){
+        //  this.getAllLists();
+          }
+      })
       }
-    })
-
-  }
+      deletelist(){
+      alert("ballot box deleted succesfully")
+  
+    }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

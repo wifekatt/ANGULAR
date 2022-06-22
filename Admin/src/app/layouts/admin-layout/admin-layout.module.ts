@@ -52,6 +52,7 @@ import { UrnesDialogComponent } from '../../urnes/urnes-dialog/urnes-dialog.comp
 
 
 import { ResultComponent } from '../../result/result.component';
+import { PrivilegeComponent } from '../../privilege/privilege.component';
 
 
 
@@ -115,7 +116,8 @@ import { ResultComponent } from '../../result/result.component';
     UrnesDialogComponent,
    
     ResultComponent,
-  
+    PrivilegeComponent,
+
 
   ],
   exports: [

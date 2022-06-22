@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl="http://localhost:5050/api/v1/login";
+  private baseUrl="http://localhost:5050/user/login";
   constructor(private http: HttpClient) {}
 
   login(electeur: Electeur):Observable<object>{

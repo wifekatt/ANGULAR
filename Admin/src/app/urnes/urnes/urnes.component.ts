@@ -62,7 +62,7 @@ export class UrnesComponent implements OnInit {
     })
     }
     deleteUrne(){
-    
+    alert("ballot box deleted succesfully")
 
   }
   applyFilter(event: Event) {

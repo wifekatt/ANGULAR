@@ -16,12 +16,12 @@ electeur:Electeur = new Electeur();
   ngOnInit(): void {
   }
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  CINFormControl = new FormControl('', [Validators.required]);
+  passwordFormControl = new FormControl('', [Validators.required]);
   userLogin(){
 console.log(this.electeur);
 this.authService.login(this.electeur).subscribe(data=>{
   alert("login successfully")
-  },error=>alert("Cin or Email are not valid"));
+  },error=>alert("please enter correct Cin and Email"));
   }
 
 }

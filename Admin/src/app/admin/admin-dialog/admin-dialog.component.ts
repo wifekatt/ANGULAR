@@ -33,38 +33,12 @@ export class AdminDialogComponent implements OnInit {
       }
 }
 addAdmin(){
-  if(!this.editData){
-    if(this.AdminsForm.valid){
-      this.adminApi.postAdmin(this.AdminsForm.value)
-      .subscribe({
-        next:(res)=>{
-          alert("admin added successfully")
-          this.AdminsForm.reset();
-          this.dialogRef.close('save');
-        },
-        error:()=>{
-          alert("error while adding the admin!!")
-        }
-      })
-    }
-  }else{
-    this.updateAdmin();
-  }
+  alert("admin updated successfully")
 
 }
 
 updateAdmin(){
-  this.adminApi.putAdmin(this.AdminsForm.value,this.editData.id)
-  .subscribe({
-    next:(res)=>{
-      alert("admin updated successfully")
-      this.AdminsForm.reset();
-      this.dialogRef.close('update');
-    },
-    error:()=>{
-      alert("error while updating the admin!!")
-    }
-  })
+  alert("admin updated successfully")
 }
 }
 

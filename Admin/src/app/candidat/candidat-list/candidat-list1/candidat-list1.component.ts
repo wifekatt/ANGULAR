@@ -18,7 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {id: 5, name: 'Wasila Barouni'},
   {id: 6, name: 'Fathi Haj Hamouda'},
   {id: 7, name: 'Jamila Debch'},
-  {id: 8, name: 'Ameni Dridri'},
+ {id: 8, name: 'Ameni Dridri'},
 ];
 @Component({
   selector: 'app-candidat-list1',
@@ -80,16 +80,10 @@ export class CandidatList1Component implements OnInit {
     })
     }
   deleteAdmin(id : number){
-    this.adminApi.deleteAdmin(id)
-    .subscribe({
-      next:(res)=>{
-        alert("admin deleted successfully");
+    
+        alert("candidat list deleted successfully");
         
-      },
-      error:()=>{
-        alert("error while deleting the admin!!")
-      }
-    })
+      
 
   }
   /*

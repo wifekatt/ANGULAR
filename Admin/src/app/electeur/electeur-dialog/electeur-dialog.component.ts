@@ -41,39 +41,16 @@ export class ElecteurDialogComponent implements OnInit {
         }
   }
   addElecteur(){
-    if(!this.editData){
-      if(this.ElecteursForm.valid){
-        this.electeurApi.createElecteur(this.ElecteursForm.value)
-        .subscribe({
-          next:(res)=>{
-            alert("electeur added successfully")
-            this.ElecteursForm.reset();
-            this.dialogRef.close('save');
-          },
-          error:()=>{
-            alert("error while adding the electeur!!")
-          }
-        })
-      }
-    }else{
-      this.updateElecteur();
-    }
+   
+            alert("user added successfully")
+           
   
   }
   
   updateElecteur(){
-    console.log(this.editData.electeurID)
-        this.electeurApi.updateElecteur(this.editData.electeurID,this.ElecteursForm.value)
-        .subscribe({
-          next:(res)=>{
-            alert("Electeur updated successfully")
-            this.ElecteursForm.reset();
-            this.dialogRef.close('update');
-          },
-          error:()=>{
-            alert("error while updating the Electeur!!")
-          }
-        })
+    
+            alert("user updated successfully")
+            
       }
   }
   
